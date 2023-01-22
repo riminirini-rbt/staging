@@ -1,0 +1,294 @@
+html {
+    max-width: 100%;
+    overflow-x: none;
+}
+
+.photos-holder {
+    overflow: hidden;
+}
+
+.swiper-container {
+    height: 75vh;
+}
+
+#site-head {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-size: cover;
+}
+
+/* carousel */
+.swiper-container {
+    width: auto;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide-content {
+    background-clip: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 95%;
+    height: 100%;
+    border: 2px solid rgba(230, 0, 149);
+}
+
+/* carousel */
+/* TODO: consider changing the structure of the slides. there seems to be an extra div. */
+#michelin-slide {
+    height: 600px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    border: 2px solid rgba(230, 0, 149);
+    background-position: center;
+    background-position-y: -80px;
+    background-image: url('/images/michelin.jpg')
+}
+
+/* site head */
+#site-head-content.inner {
+    background: rgb(255, 255, 255);
+    border: 5px solid rgba(230, 0, 149);
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#site-head-banner {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+}
+
+#site-head-banner div:nth-child(1) {
+    flex: 25;
+    background: url('/images/rimini-logo.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#site-head-banner div:nth-child(2) {
+    flex: 75;
+}
+
+.blog-title {
+    font-family: cursive;
+    color: rgba(230, 0, 149);
+}
+
+.blog-description {
+    color: rgba(230, 0, 149);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.blog-summary {
+    padding: 0;
+    margin: 0;
+    color: rgba(230, 0, 149);
+    font-family: cursive;
+}
+
+#site-head-menu-buttons {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#site-head-menu-buttons a {
+    border: 2px solid black;
+    width: 33%; /* enforce width */
+    border-radius: 0;
+    font-size: 0.5em; /* enforce fontsize relative to width */
+}
+
+#site-head-menu-buttons a:nth-of-type(1) {
+    background-color: rgb(64, 144, 78);
+}
+
+#site-head-menu-buttons a:nth-of-type(2) {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    margin-left: -2px;
+}
+
+#site-head-menu-buttons a:nth-of-type(3) {
+    background-color: rgb(189, 59, 61);
+    margin-left: -2px;
+}
+
+/* post */
+.post-holder.odd {
+    background: rgba(230, 0, 149);
+    color: white;
+}
+
+/* menu viewer */
+.food-menu {
+    position: relative;
+    width: 100%;
+    margin: 0rem auto;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+    height: 70%;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+.food-menu .post-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-viewer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* map */
+.map {
+    width: 100%;
+    height: 60vh;
+    border-color: rgba(230, 0, 149);
+}
+
+#map-plug {
+    display: none;
+}
+
+#google-reviews {
+    display: flex;
+    flex-wrap: wrap;
+    /*display: grid;
+grid-template-columns: repeat( auto-fit, minmax(320px, 1fr));*/
+}
+
+span.review-profile-image {
+    float: left;
+    padding: 0px 15px 0px 0px;
+    display: hidden;
+}
+
+span.review-profile-image img {
+    width: 40px;
+    display: none;
+}
+
+span.review-sep {
+    display: none;
+}
+
+.modal-backdrop.in {
+    display: none;
+}
+
+.review-item {
+    border-bottom: solid 1px rgba(190, 190, 190, .35);
+    margin: 5px auto;
+    display: block;
+    width: 100%;
+    padding: 15px 0px;
+}
+
+@media (max-width:1200px) {
+    .review-item {
+        flex: 1 1 40%;
+    }
+}
+
+@media (max-width:450px) {
+    .review-item {
+        flex: 1 1 90%;
+    }
+}
+
+.review-meta,
+.review-stars {
+    text-align: left;
+    font-size: 115%;
+}
+
+.review-author {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.review-date {
+    opacity: .6;
+    display: block;
+}
+
+.review-text {
+    line-height: 1.55;
+    text-align: left;
+    max-width: 72em;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.review-stars ul {
+    display: inline-block;
+    list-style-type: none !important;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.review-stars ul li {
+    float: left;
+    list-style: none !important;
+    margin-left: 0;
+    margin-right: 1px;
+    line-height: 1;
+}
+
+.review-stars ul li i {
+    color: #E4B248;
+    font-size: 1.4em;
+    font-style: normal;
+}
+
+.review-stars ul li i.inactive {
+    color: #c6c6c6;
+}
+
+.star:after {
+    content: "\2605";
+}
+
+
+/* misc */
+.post-header {
+    margin-bottom: 30px;
+}
+
+.figure .caption {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.figure .caption i {
+    margin-top: 20px;
+    font-size: 2vmin;
+    line-height: 3vmin;
+    width: 75%;
+}
