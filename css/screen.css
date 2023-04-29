@@ -926,13 +926,17 @@ a.fn-item.active {
   top: -33px;
 }
 
-.menu-viewer {
-  flex-direction: row;
+#menu-viewer {
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  width: 50vw;
+}
+#menu-viewer img {
+  margin-top: 1vh;
 }
 
-.menu-viewer img {
-  margin-left: 1vw;
-  width: 40vw;
+#menu-viewer img:first-of-type {
+  margin-top: 0px;
 }
 
 /* ==========================================================================
@@ -941,18 +945,8 @@ a.fn-item.active {
 
 @media only screen and (max-width: 1130px) {
 
-  .menu-viewer {
-    flex-direction: column;
-  }
-
-  .menu-viewer img {
-    margin-top: 1vh;
-    margin-left: 0;
-    width: 100vw;
-  }
-
-  .menu-viewer img:first-of-type {
-    margin-top: 0px;
+  #menu-viewer {
+    width: 90vw;
   }
 
   .fixed-nav {
